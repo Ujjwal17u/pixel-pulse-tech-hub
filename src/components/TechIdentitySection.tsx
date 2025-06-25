@@ -19,8 +19,7 @@ const TechIdentitySection = () => {
         </h2>
         
         <p className="text-xl text-tech-gray mb-12 max-w-4xl mx-auto leading-relaxed font-body animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          We believe in recognition. Get featured on our Member Wall, earn skill-based badges, 
-          and track your growth journey across all our events.
+          Track your growth and achievements in YÄTSU Squad. Earn badges, be part of our Member Wall, and showcase your journey.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">

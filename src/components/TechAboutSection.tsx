@@ -5,58 +5,84 @@ import { BookOpen, Code, Users, Mic, TrendingUp } from 'lucide-react';
 
 const TechAboutSection = () => {
   const benefits = [
-    { icon: BookOpen, title: 'Free Learning Resources', description: 'Access to curated learning materials' },
-    { icon: Code, title: 'Real Project Experience', description: 'Work on actual projects with teams' },
-    { icon: Users, title: 'Community Networking', description: 'Connect with like-minded developers' },
-    { icon: Mic, title: 'Event Participation', description: 'Join workshops, hackathons, and meetups' },
-    { icon: TrendingUp, title: 'Growth & Guidance', description: 'Mentorship and career development' }
+    {
+      icon: BookOpen,
+      title: 'Learning Resources',
+      description: 'Curated content and materials',
+      color: 'tech-orange'
+    },
+    {
+      icon: Code,
+      title: 'Real Projects',
+      description: 'Hands-on development experience',
+      color: 'tech-cyan'
+    },
+    {
+      icon: Users,
+      title: 'Peer Networking',
+      description: 'Connect with like-minded builders',
+      color: 'tech-orange'
+    },
+    {
+      icon: Mic,
+      title: 'Tech Events',
+      description: 'Workshops and meetups',
+      color: 'tech-cyan'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Career Guidance',
+      description: 'Mentorship and growth opportunities',
+      color: 'tech-orange'
+    }
   ];
 
   return (
-    <section id="about" className="py-20 px-4 bg-tech-dark">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="py-20 px-4 bg-tech-black">
+      <div className="max-w-7xl mx-auto">
         <h2 className="font-primary text-4xl md:text-5xl font-bold text-center mb-16 text-tech-light tech-text-glow animate-fade-in">
-          About TechComm
+          About YÄTSU Squad
         </h2>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className="space-y-6 animate-slide-up">
-            <p className="text-lg text-tech-gray leading-relaxed font-body">
-              TechComm is a student-led community of developers, creators, and tech enthusiasts. 
-              We help members grow through learning resources, real project opportunities, networking, 
-              and career development.
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Left Text Content */}
+          <div className="space-y-8 animate-fade-in">
+            <p className="text-xl text-tech-gray leading-relaxed font-body">
+              YÄTSU Squad is a student-powered community of tech builders and creators. We help our members grow through curated learning, real project experience, community networking, and guided career development.
             </p>
-            <p className="text-lg text-tech-gray leading-relaxed font-body">
-              Our mission is to create a thriving ecosystem where passionate learners can build, 
-              connect, and grow together while shipping real solutions to real problems.
-            </p>
-          </div>
-          
-          <div className="relative animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <div className="w-full h-80 bg-gradient-to-br from-tech-orange/20 to-tech-cyan/20 rounded-lg flex items-center justify-center">
-              <div className="text-6xl text-tech-orange/60">🚀</div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {benefits.map((benefit, index) => (
+                <div 
+                  key={index}
+                  className="flex items-start gap-4 p-4 bg-tech-dark/50 rounded-lg border border-tech-orange/20 hover:border-tech-orange/50 transition-all duration-300"
+                >
+                  <benefit.icon className={`w-8 h-8 text-${benefit.color} flex-shrink-0 mt-1`} />
+                  <div>
+                    <h3 className="font-primary font-semibold text-tech-light mb-1">{benefit.title}</h3>
+                    <p className="text-tech-gray text-sm font-body">{benefit.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-tech-cyan rounded-full animate-float"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-tech-orange rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
           </div>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {benefits.map((benefit, index) => (
-            <Card 
-              key={index} 
-              className="bg-tech-black/50 border-tech-orange/20 hover:border-tech-orange tech-glow hover:tech-glow-cyan transition-all duration-500 group transform hover:scale-105 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardContent className="p-6 text-center">
-                <benefit.icon className="w-12 h-12 mx-auto mb-4 text-tech-orange group-hover:text-tech-cyan transition-colors duration-300" />
-                <h3 className="font-primary text-lg font-semibold text-tech-light mb-2">
-                  {benefit.title}
+          {/* Right Illustration */}
+          <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="bg-tech-dark/50 rounded-lg p-8 tech-glow border border-tech-cyan/30">
+              <div className="text-center">
+                <div className="w-64 h-64 mx-auto mb-6 bg-gradient-to-br from-tech-orange/20 to-tech-cyan/20 rounded-full flex items-center justify-center">
+                  <div className="text-6xl">🚀</div>
+                </div>
+                <h3 className="font-primary text-2xl font-bold text-tech-light mb-4 tech-text-glow">
+                  Building the Future Together
                 </h3>
-                <p className="text-tech-gray text-sm font-body">{benefit.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+                <p className="text-tech-gray font-body">
+                  Join a community where innovation meets collaboration, and ideas become reality.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

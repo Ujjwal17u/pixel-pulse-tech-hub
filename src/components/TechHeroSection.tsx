@@ -22,17 +22,23 @@ const TechHeroSection = () => {
       <div className="absolute bottom-16 right-16 text-tech-cyan text-2xl opacity-20 animate-float" style={{ animationDelay: '0.5s' }}>🚀</div>
 
       <div className="text-center z-10 max-w-5xl mx-auto px-4">
+        {/* Stylized Y Logo */}
+        <div className="mb-8 animate-fade-in">
+          <div className="w-24 h-24 mx-auto mb-6 relative">
+            <div className="text-8xl font-primary font-bold text-tech-orange tech-text-glow">
+              Y
+            </div>
+          </div>
+        </div>
+
         <h1 className="font-primary text-6xl md:text-8xl font-bold mb-6 text-tech-light tech-text-glow animate-fade-in">
-          TechComm
+          We Build. We Solve. We Ship.
         </h1>
         <h2 className="font-secondary text-2xl md:text-4xl font-semibold mb-4 text-tech-orange tech-text-glow animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          Build. Connect. Grow.
+          Build. Connect. Grow with YÄTSU Squad.
         </h2>
-        <p className="font-body text-lg md:text-xl mb-8 text-tech-gray max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          We Build. We Solve. We Ship.
-        </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <Button 
             className="font-primary text-lg px-10 py-4 bg-tech-orange hover:bg-tech-orange/80 text-black tech-glow hover:animate-glow-pulse transition-all duration-300 transform hover:scale-105"
             onClick={() => window.open('https://forms.google.com', '_blank')}

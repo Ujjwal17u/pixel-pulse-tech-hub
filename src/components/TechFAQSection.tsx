@@ -5,20 +5,20 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 const TechFAQSection = () => {
   const faqs = [
     {
-      question: 'Who can join TechComm?',
-      answer: 'Anyone interested in tech, networking, and building real things. We welcome students, professionals, and anyone passionate about technology.'
+      question: 'Who can join YÄTSU Squad?',
+      answer: 'Any student or tech enthusiast passionate about building and growing. We welcome learners from all backgrounds and skill levels.'
     },
     {
-      question: 'Is there any fee?',
-      answer: 'No, TechComm is 100% free and open to all. We believe in making tech education and community accessible to everyone.'
+      question: 'What does it cost?',
+      answer: 'Nothing. It\'s completely free to join and participate in all YÄTSU Squad activities.'
     },
     {
-      question: 'How will I get updates?',
-      answer: 'Via email and social groups after registration. We keep our community informed through multiple channels including Discord, LinkedIn, and our newsletter.'
+      question: 'How do I get updates?',
+      answer: 'You\'ll be added to our LinkedIn & Instagram groups once registered. We also send regular updates via email.'
     },
     {
-      question: 'Will I get recognition?',
-      answer: 'Yes! Active members get badges and get spotlighted. We have a comprehensive recognition system including skill badges, member spotlights, and achievement tracking.'
+      question: 'Will I get badges or recognition?',
+      answer: 'Yes! Active contributors get badges and visibility in the community. We have a comprehensive recognition system for achievements.'
     }
   ];
 

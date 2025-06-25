@@ -12,19 +12,19 @@ const TechTeamSection = () => {
   };
 
   const coLeaders = [
-    { name: 'Arshil Anwar', role: 'Co-Organizer', linkedin: '#' },
-    { name: 'Amrita', role: 'Community Manager', linkedin: '#' },
-    { name: 'Ujjwal Saroj', role: 'Tech Lead', linkedin: '#' },
-    { name: 'Roshni Roy', role: 'Design Lead', linkedin: '#' },
-    { name: 'Swapnil Nadel', role: 'Operations Head', linkedin: '#' },
-    { name: 'Shivam Srivastava', role: 'Event Coordinator', linkedin: '#' }
+    { name: 'Arshil Anwar', role: 'Co-Organizer', description: 'Community growth strategist', linkedin: '#' },
+    { name: 'Amrita', role: 'Community Manager', description: 'Engagement and events coordinator', linkedin: '#' },
+    { name: 'Ujjwal Saroj', role: 'Tech Lead', description: 'Technical architecture expert', linkedin: '#' },
+    { name: 'Roshni Roy', role: 'Design Lead', description: 'Creative vision and user experience', linkedin: '#' },
+    { name: 'Swapnil Nadel', role: 'Operations Head', description: 'Streamlining community operations', linkedin: '#' },
+    { name: 'Shivam Srivastava', role: 'Event Coordinator', description: 'Organizing memorable experiences', linkedin: '#' }
   ];
 
   return (
     <section id="team" className="py-20 px-4 bg-tech-black">
       <div className="max-w-6xl mx-auto">
         <h2 className="font-primary text-4xl md:text-5xl font-bold text-center mb-16 text-tech-light tech-text-glow animate-fade-in">
-          Meet the Team
+          Meet the Organizers
         </h2>
         
         {/* Founder Card */}
@@ -65,7 +65,8 @@ const TechTeamSection = () => {
                 <h3 className="font-primary text-lg font-bold text-tech-light mb-2 tech-text-glow">
                   {member.name}
                 </h3>
-                <p className="text-tech-gray text-sm mb-4 font-body">{member.role}</p>
+                <p className="text-tech-cyan text-sm mb-2 font-secondary font-medium">{member.role}</p>
+                <p className="text-tech-gray text-xs mb-4 font-body">{member.description}</p>
                 <Button
                   variant="outline"
                   size="sm"

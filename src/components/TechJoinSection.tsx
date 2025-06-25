@@ -22,11 +22,11 @@ const TechJoinSection = () => {
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <div className="bg-tech-dark/80 backdrop-blur-sm rounded-lg p-12 tech-glow border border-tech-orange/20">
           <h2 className="font-primary text-4xl md:text-5xl font-bold mb-8 text-tech-light tech-text-glow animate-fade-in">
-            Become a Part of TechComm
+            Become a Part of YÄTSU Squad
           </h2>
           
           <p className="text-xl text-tech-gray mb-8 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Fill the form to register and officially join our vibrant tech family.
+            Fill the form to register and officially become part of our tech community.
           </p>
 
           <Button 
