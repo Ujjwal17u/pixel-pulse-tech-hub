@@ -1,36 +1,33 @@
 
 import React from 'react';
-import PixelNavigation from '@/components/PixelNavigation';
-import HeroSection from '@/components/HeroSection';
-import AboutSection from '@/components/AboutSection';
-import IdentitySection from '@/components/IdentitySection';
-import TracksSection from '@/components/TracksSection';
-import TimelineSection from '@/components/TimelineSection';
-import TeamSection from '@/components/TeamSection';
-import JoinBanner from '@/components/JoinBanner';
-import FAQSection from '@/components/FAQSection';
+import TechHeroSection from '@/components/TechHeroSection';
+import TechStatsSection from '@/components/TechStatsSection';
+import TechAboutSection from '@/components/TechAboutSection';
+import TechTracksSection from '@/components/TechTracksSection';
+import TechIdentitySection from '@/components/TechIdentitySection';
+import TechTeamSection from '@/components/TechTeamSection';
+import TechJoinSection from '@/components/TechJoinSection';
+import TechFAQSection from '@/components/TechFAQSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-pixel-black text-neon-white overflow-x-hidden">
-      <PixelNavigation />
-      
+    <div className="min-h-screen bg-tech-black text-tech-light overflow-x-hidden">
       <main>
-        <HeroSection />
-        <AboutSection />
-        <IdentitySection />
-        <TracksSection />
-        <TimelineSection />
-        <TeamSection />
-        <JoinBanner />
-        <FAQSection />
+        <TechHeroSection />
+        <TechStatsSection />
+        <TechAboutSection />
+        <TechTracksSection />
+        <TechIdentitySection />
+        <TechTeamSection />
+        <TechJoinSection />
+        <TechFAQSection />
       </main>
 
       {/* Footer */}
-      <footer className="py-8 px-4 bg-pixel-dark border-t border-neon-red/30">
+      <footer className="py-8 px-4 bg-tech-dark border-t border-tech-orange/30">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400">
-            © 2024 Pixel Pulse Tech Hub. Built with 💻 and ❤️ by the community.
+          <p className="text-tech-gray font-body">
+            © 2024 TechComm. Built with 💻 and ❤️ by the community.
           </p>
         </div>
       </footer>

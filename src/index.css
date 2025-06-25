@@ -1,51 +1,42 @@
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* TechComm Design System */
 
 @layer base {
   :root {
-    --background: 10 10% 4%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 94%;
 
-    --card: 10 10% 7%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 94%;
 
-    --popover: 10 10% 7%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 94%;
 
-    --primary: 0 84% 62%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 12 100% 58%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 25 95% 53%;
+    --secondary: 195 100% 50%;
     --secondary-foreground: 0 0% 0%;
 
-    --muted: 10 10% 15%;
+    --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 10 10% 15%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 94%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 10 10% 15%;
-    --input: 10 10% 15%;
-    --ring: 0 84% 62%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 12 100% 58%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 10 10% 4%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 0 84% 62%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 10 10% 15%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 10 10% 15%;
-    --sidebar-ring: 0 84% 62%;
   }
 }
 
@@ -55,7 +46,8 @@
   }
 
   body {
-    @apply bg-pixel-black text-neon-white font-pixel;
+    @apply bg-tech-black text-tech-light font-primary;
+    scroll-behavior: smooth;
   }
 
   html {
@@ -64,27 +56,27 @@
 }
 
 @layer components {
-  .pixel-glow {
-    box-shadow: 0 0 10px rgba(255, 0, 64, 0.5), 0 0 20px rgba(255, 0, 64, 0.3), 0 0 30px rgba(255, 0, 64, 0.1);
+  .tech-glow {
+    box-shadow: 0 0 20px rgba(255, 76, 41, 0.3), 0 0 40px rgba(255, 76, 41, 0.2);
   }
   
-  .pixel-glow-orange {
-    box-shadow: 0 0 10px rgba(255, 107, 0, 0.5), 0 0 20px rgba(255, 107, 0, 0.3), 0 0 30px rgba(255, 107, 0, 0.1);
+  .tech-glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 207, 255, 0.3), 0 0 40px rgba(0, 207, 255, 0.2);
   }
   
-  .pixel-border {
-    border: 2px solid;
-    border-image: linear-gradient(45deg, #ff0040, #ff6b00) 1;
+  .tech-border {
+    border: 1px solid;
+    border-image: linear-gradient(45deg, #FF4C29, #00CFFF) 1;
   }
   
-  .neon-text {
-    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  .tech-text-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
   }
   
-  .pixel-grid {
+  .tech-particles {
     background-image: 
-      linear-gradient(rgba(255, 0, 64, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 0, 64, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
+      radial-gradient(circle at 20% 80%, rgba(255, 76, 41, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(0, 207, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(255, 76, 41, 0.05) 0%, transparent 50%);
   }
 }
