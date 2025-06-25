@@ -56,9 +56,7 @@ const TechHeroSection = () => {
         
         <p className="text-xl md:text-2xl mb-12 text-tech-gray max-w-3xl mx-auto leading-relaxed font-body animate-fade-in" style={{
         animationDelay: '0.3s'
-      }}>
-          Build. Connect. Grow with YÄTSU Squad.
-        </p>
+      }}>Build. Connect. Grow with YÄ~TSU Squad.</p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in" style={{
         animationDelay: '0.4s'
