@@ -1,70 +1,39 @@
-import React, { useState, useEffect } from 'react';
+
+import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+
 const TechStatsSection = () => {
-  const [counts, setCounts] = useState({
-    members: 0,
-    projects: 0,
-    colleges: 0,
-    cities: 0
-  });
-  const finalCounts = {
-    members: 1500,
-    projects: 135,
-    colleges: 75,
-    cities: 120
-  };
-  useEffect(() => {
-    const animateCounters = () => {
-      const duration = 2000;
-      const steps = 60;
-      const stepDuration = duration / steps;
-      Object.keys(finalCounts).forEach(key => {
-        const finalValue = finalCounts[key as keyof typeof finalCounts];
-        const stepValue = finalValue / steps;
-        let currentStep = 0;
-        const interval = setInterval(() => {
-          currentStep++;
-          setCounts(prev => ({
-            ...prev,
-            [key]: Math.min(Math.round(stepValue * currentStep), finalValue)
-          }));
-          if (currentStep >= steps) {
-            clearInterval(interval);
-          }
-        }, stepDuration);
-      });
-    };
-    const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) {
-        animateCounters();
-        observer.disconnect();
-      }
-    }, {
-      threshold: 0.5
-    });
-    const element = document.getElementById('stats-section');
-    if (element) {
-      observer.observe(element);
-    }
-    return () => observer.disconnect();
-  }, []);
-  const stats = [{
-    number: `${counts.members}+`,
-    label: 'Members',
-    color: 'tech-orange'
-  }, {
-    number: `${counts.projects}+`,
-    label: 'Projects',
-    color: 'tech-cyan'
-  }, {
-    number: `${counts.colleges}+`,
-    label: 'Colleges',
-    color: 'tech-orange'
-  }, {
-    number: `${counts.cities}+`,
-    label: 'Cities',
-    color: 'tech-cyan'
-  }];
-  return;
+  const stats = [
+    { number: '1.5K+', label: 'Members' },
+    { number: '135+', label: 'Projects' },
+    { number: '75+', label: 'Colleges' },
+    { number: '120+', label: 'Cities' }
+  ];
+
+  return (
+    <section className="py-20 px-4 bg-tech-black">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <Card 
+              key={index}
+              className="bg-tech-dark/50 border-tech-orange/30 tech-glow text-center p-8 animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardContent className="p-0">
+                <div className="text-4xl md:text-5xl font-bold text-tech-orange tech-text-glow mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-tech-gray font-body text-lg">
+                  {stat.label}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default TechStatsSection;

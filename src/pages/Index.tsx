@@ -4,7 +4,7 @@ import TechNavigation from '@/components/TechNavigation';
 import TechHeroSection from '@/components/TechHeroSection';
 import TechStatsSection from '@/components/TechStatsSection';
 import TechAboutSection from '@/components/TechAboutSection';
-import TechTracksSection from '@/components/TechTracksSection';
+import AnimatedTechStack from '@/components/AnimatedTechStack';
 import TechIdentitySection from '@/components/TechIdentitySection';
 import TechTeamSection from '@/components/TechTeamSection';
 import TechJoinSection from '@/components/TechJoinSection';
@@ -30,7 +30,7 @@ const Index = () => {
         <TechHeroSection />
         <TechStatsSection />
         <TechAboutSection />
-        <TechTracksSection />
+        <AnimatedTechStack />
         <TechIdentitySection />
         <TechTeamSection />
         <TechJoinSection />
