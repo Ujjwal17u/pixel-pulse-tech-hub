@@ -4,8 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Clean Professional Design System */
-
 @layer base {
   :root {
     --background: 0 0% 5%;
