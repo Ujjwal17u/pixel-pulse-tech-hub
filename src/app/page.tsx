@@ -1,16 +1,14 @@
+import TechNavigation from '@/components/TechNavigation'
+import TechHeroSection from '@/components/TechHeroSection'
+import TechStatsSection from '@/components/TechStatsSection'
+import TechAboutSection from '@/components/TechAboutSection'
+import AnimatedTechStack from '@/components/AnimatedTechStack'
+import TechIdentitySection from '@/components/TechIdentitySection'
+import TechTeamSection from '@/components/TechTeamSection'
+import TechJoinSection from '@/components/TechJoinSection'
+import TechFAQSection from '@/components/TechFAQSection'
 
-import React from 'react';
-import TechNavigation from '@/components/TechNavigation';
-import TechHeroSection from '@/components/TechHeroSection';
-import TechStatsSection from '@/components/TechStatsSection';
-import TechAboutSection from '@/components/TechAboutSection';
-import AnimatedTechStack from '@/components/AnimatedTechStack';
-import TechIdentitySection from '@/components/TechIdentitySection';
-import TechTeamSection from '@/components/TechTeamSection';
-import TechJoinSection from '@/components/TechJoinSection';
-import TechFAQSection from '@/components/TechFAQSection';
-
-const Index = () => {
+export default function Home() {
   return (
     <div className="min-h-screen bg-tech-black text-tech-light overflow-x-hidden relative">
       {/* Navigation Sidebar */}
@@ -41,7 +39,5 @@ const Index = () => {
         </div>
       </footer>
     </div>
-  );
-};
-
-export default Index;
+  )
+}

@@ -1,9 +1,10 @@
+'use client'
 
-import React, { useState, useEffect } from 'react';
-import { Home, User, Target, Users, HelpCircle, Award, UserPlus } from 'lucide-react';
+import React, { useState, useEffect } from 'react'
+import { Home, User, Target, Users, HelpCircle, Award, UserPlus } from 'lucide-react'
 
 const TechNavigation = () => {
-  const [activeSection, setActiveSection] = useState('hero');
+  const [activeSection, setActiveSection] = useState('hero')
 
   const navItems = [
     { id: 'hero', icon: Home, label: 'Home' },
@@ -13,39 +14,39 @@ const TechNavigation = () => {
     { id: 'team', icon: Users, label: 'Team' },
     { id: 'join', icon: UserPlus, label: 'Join' },
     { id: 'faq', icon: HelpCircle, label: 'FAQ' }
-  ];
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map(item => document.getElementById(item.id));
-      const scrollPosition = window.scrollY + 100;
+      const sections = navItems.map(item => document.getElementById(item.id))
+      const scrollPosition = window.scrollY + 100
 
       for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
+        const section = sections[i]
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navItems[i].id);
-          break;
+          setActiveSection(navItems[i].id)
+          break
         }
       }
-    };
+    }
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
+    const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth' })
     }
-  };
+  }
 
   return (
     <nav className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50 bg-tech-dark/90 backdrop-blur-sm rounded-lg p-2 tech-glow border border-tech-orange/20">
       <div className="flex flex-col space-y-2">
         {navItems.map((item) => {
-          const Icon = item.icon;
-          const isActive = activeSection === item.id;
+          const Icon = item.icon
+          const isActive = activeSection === item.id
           
           return (
             <button
@@ -66,11 +67,11 @@ const TechNavigation = () => {
                 {item.label}
               </div>
             </button>
-          );
+          )
         })}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default TechNavigation;
+export default TechNavigation

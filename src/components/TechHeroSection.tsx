@@ -1,6 +1,7 @@
+'use client'
 
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react'
+import { Button } from '@/components/ui/button'
 
 const TechHeroSection = () => {
   return (
@@ -75,7 +76,7 @@ const TechHeroSection = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-tech-orange/20 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-tech-cyan/20 to-transparent rounded-full blur-3xl"></div>
     </section>
-  );
-};
+  )
+}
 
-export default TechHeroSection;
+export default TechHeroSection
