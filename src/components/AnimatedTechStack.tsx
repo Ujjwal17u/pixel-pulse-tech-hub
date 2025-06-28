@@ -4,26 +4,6 @@ import React, { useState, useEffect } from 'react';
 const AnimatedTechStack = () => {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  "use client"; // <--- Add this line at the top
-
-import React, { useState, useEffect } from "react";
-
-const AnimatedTechStack = () => {
-  const [currentFrame, setCurrentFrame] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFrame((prev) => (prev + 1) % 5);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return <div>{currentFrame}</div>;
-};
-
-export default AnimatedTechStack;
-
 
   const frames = [
     {
