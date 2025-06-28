@@ -1,8 +1,10 @@
+
 import TechNavigation from '@/components/TechNavigation'
 import TechHeroSection from '@/components/TechHeroSection'
 import TechStatsSection from '@/components/TechStatsSection'
 import TechAboutSection from '@/components/TechAboutSection'
 import AnimatedTechStack from '@/components/AnimatedTechStack'
+import TechTracksCarousel from '@/components/TechTracksCarousel'
 import TechIdentitySection from '@/components/TechIdentitySection'
 import TechTeamSection from '@/components/TechTeamSection'
 import TechJoinSection from '@/components/TechJoinSection'
@@ -24,6 +26,7 @@ export default function Home() {
         <TechStatsSection />
         <TechAboutSection />
         <AnimatedTechStack />
+        <TechTracksCarousel />
         <TechIdentitySection />
         <TechTeamSection />
         <TechJoinSection />
